@@ -27,7 +27,7 @@ https://rutube.ru/play/embed/9e4cd81a6b2566e9d949881dbb53905e/?t=3&stopTime=240&
 
 Отправка сообщения плееру через интерфейс ```postMessage```:
 ```js
-var player = document.getElementById("player");
+const player = document.getElementById("player");
 
 player.contentWindow.postMessage(
  JSON.stringify({
@@ -77,7 +77,7 @@ player.contentWindow.postMessage(
 
 ```js
 window.addEventListener("message", function (event) {
- var message = JSON.parse(event.data);
+ const message = JSON.parse(event.data);
  console.log(message);
 });
 
@@ -175,3 +175,7 @@ window.addEventListener("message", function (event) {
 ```player:error``` — Ошибка во время проигрывания. Ответ возвращает:
  - ```message``` — сообщение об ошибке
  - ```type```
+
+#### Использовались материалы:
+ - [FAQ: Встраивание видео с RUTUBE](https://rutube.ru/info/embed/)
+ - [Rutube Player JS API (archived)](https://github.com/rutube/RutubePlayerJSAPI)
